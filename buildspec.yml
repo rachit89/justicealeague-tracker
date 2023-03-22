@@ -24,3 +24,5 @@ artifacts:
 cache:
   paths:
   - '/root/.m2/**/*'
+  
+  

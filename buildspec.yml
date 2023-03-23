@@ -13,6 +13,7 @@ phases:
   build:
     commands:
     - echo building the justiceleague-tracker
+    - echo $CODEBUILD_SOURCE_VERSION
   ##  - mvn install
 artifacts:
   files:

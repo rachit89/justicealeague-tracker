@@ -14,6 +14,7 @@ phases:
     commands:
     - echo building the justiceleague-tracker
     - echo $CODEBUILD_SOURCE_VERSION
+    - scripts/codebuild-git-wrapper.sh "$REPO_URL" "$REPO_BRANCH" # These environment variables come from the CFN stack
    ##  - mvn install
 artifacts:
   files:

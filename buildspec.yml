@@ -16,8 +16,9 @@ phases:
     - echo $CODEBUILD_SOURCE_VERSION
     - export CODEBUILD_GIT_BRANCH=`git symbolic-ref HEAD --short 2>/dev/null`
     - echo $CODEBUILD_GIT_BRANCH
-    - chmod +x scripts/codebuild-git-wrapper.sh
-    - scripts/codebuild-git-wrapper.sh "$REPO_URL" "$REPO_BRANCH" # These environment variables come from the CFN stack
+    - echo $CODEBUILD_RESOLVED_SOURCE_VERSION
+   ## - chmod +x scripts/codebuild-git-wrapper.sh
+   ## - scripts/codebuild-git-wrapper.sh "$REPO_URL" "$REPO_BRANCH" # These environment variables come from the CFN stack
    ##  - mvn install
 artifacts:
   files:
